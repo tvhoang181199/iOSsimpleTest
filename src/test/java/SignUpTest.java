@@ -38,53 +38,36 @@ public class SignUpTest {
     }
 
     @Test
-    public void SignUpSuccess() {
+    public void SignUp() {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(3,TimeUnit.SECONDS);
-    
+        driver.manage().timeouts().pageLoadTimeout(3, TimeUnit.SECONDS);
+        MobileElement el1 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeStaticText[@name=\"Sign Up\"]");
+        el1.click();
+        List<MobileElement> els1 = (List<MobileElement>) driver.findElementsById("Last Name");
+        els1.get(0).sendKeys("Huong");
+        MobileElement el3 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeApplication[@name=\"Sneakers Management\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField[2]");
+        el3.sendKeys("Lam");
+        MobileElement el4 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeApplication[@name=\"Sneakers Management\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField[3]");
+        el4.sendKeys("11111111");
+        el4.click();
+        MobileElement el5 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeButton[@name=\" Female\"]");
+        el5.click();
+        MobileElement el6 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeApplication[@name=\"Sneakers Management\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField[4]");
+        el6.sendKeys("1712061@abc.com");
+        MobileElement el7 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeApplication[@name=\"Sneakers Management\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeSecureTextField[1]");
+        el7.sendKeys("Lqh@1234");
+        MobileElement el8 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeApplication[@name=\"Sneakers Management\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeSecureTextField[2]");
+        el8.sendKeys("Lqh@1234");
+        MobileElement el9 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeButton[@name=\" Standard\"]");
+        el9.click();
+        MobileElement el10 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeButton[@name=\"Sign Up\"]");
+        el10.click();
 
-        Assert.assertEquals(true, els3.isEmpty());
-//        List<MobileElement> els2 = (List<MobileElement>) driver.findElementsById("Change password");
-//        els2.get(0).click();
-//        WebDriverWait wait = new WebDriverWait(driver, 10);
-//        wait.until(ExpectedConditions.textToBePresentInElement(By.xpath("//XCUIElementTypeButton[@name=\"Account\"]"));
-        //MobileElement el4 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeButton[@name=\"Account\"]");
-        //el4.click();
-        //List<MobileElement> els1 = (List<MobileElement>) driver.findElementsById("Logout");
-//        List<MobileElement> els2 = (List<MobileElement>) driver.findElementsById("Logout");
-//        els2.get(0).click();
+        MobileElement el11 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeButton[@name=\"Sign Up\"]");
+        el11.click();
 
-
-
-        //
-//          MobileElement el1 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeApplication[@name=\"Sneakers Management\"]/XCUIElementTypeWindow/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField");
-//        el1.sendKeys("1712043@test.com");
-//        MobileElement el2 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeApplication[@name=\"Sneakers Management\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeSecureTextField");
-//        el2.sendKeys("VuHoang123~");
-//        MobileElement el3 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeButton[@name=\"Login\"]");
-//        el3.click();
-//        MobileElement el4 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeButton[@name=\"Account\"]");
-//        System.out.println(el4);
+   // Assert.assertEquals(true, el11.getText());
     }
-
-    @Test
-    public void sampleTest2() {
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(3,TimeUnit.SECONDS);
-        MobileElement el1 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeApplication[@name=\"Sneakers Management\"]/XCUIElementTypeWindow/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField");
-        el1.sendKeys("1712043@test.com");
-        MobileElement el2 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeApplication[@name=\"Sneakers Management\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeSecureTextField");
-        el2.sendKeys("VuHoang123~");
-        MobileElement el3 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeButton[@name=\"Login\"]");
-        el3.click();
-        List<MobileElement> els1 = (List<MobileElement>) driver.findElementsById("Account");
-        els1.get(0).click();
-        List<MobileElement> els3 = (List<MobileElement>) driver.findElementsById("Change Password");
-        els3.get(0).click();
-
-        Assert.assertEquals(false, els3.isEmpty());
-    }
-
 
     @After
     public void tearDown() {

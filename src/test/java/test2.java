@@ -39,8 +39,8 @@ public class test2 {
 
     @Test
     public void sampleTest() {
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(3,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(100,TimeUnit.SECONDS);
         MobileElement el1 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeApplication[@name=\"Sneakers Management\"]/XCUIElementTypeWindow/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField");
         el1.sendKeys("1712043@test.com");
         MobileElement el2 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeApplication[@name=\"Sneakers Management\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeSecureTextField");
@@ -49,36 +49,16 @@ public class test2 {
         el3.click();
         List<MobileElement> els1 = (List<MobileElement>) driver.findElementsById("Account");
         els1.get(0).click();
-        List<MobileElement> els3 = (List<MobileElement>) driver.findElementsById("Change Password");
-        els3.get(0).click();
-
-        Assert.assertEquals(true, els3.isEmpty());
-//        List<MobileElement> els2 = (List<MobileElement>) driver.findElementsById("Change password");
-//        els2.get(0).click();
-//        WebDriverWait wait = new WebDriverWait(driver, 10);
-//        wait.until(ExpectedConditions.textToBePresentInElement(By.xpath("//XCUIElementTypeButton[@name=\"Account\"]"));
-        //MobileElement el4 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeButton[@name=\"Account\"]");
-        //el4.click();
-        //List<MobileElement> els1 = (List<MobileElement>) driver.findElementsById("Logout");
-//        List<MobileElement> els2 = (List<MobileElement>) driver.findElementsById("Logout");
-//        els2.get(0).click();
-
-
-
-        //
-//          MobileElement el1 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeApplication[@name=\"Sneakers Management\"]/XCUIElementTypeWindow/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField");
-//        el1.sendKeys("1712043@test.com");
-//        MobileElement el2 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeApplication[@name=\"Sneakers Management\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeSecureTextField");
-//        el2.sendKeys("VuHoang123~");
-//        MobileElement el3 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeButton[@name=\"Login\"]");
-//        el3.click();
-//        MobileElement el4 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeButton[@name=\"Account\"]");
-//        System.out.println(el4);
+//        List<MobileElement> els3 = (List<MobileElement>) driver.findElementsById("Change Password");
+//        els3.get(0).click();
+//
+//        Assert.assertEquals(true, els3.isEmpty());
+//
     }
 
     @Test
     public void sampleTest2() {
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(3,TimeUnit.SECONDS);
         MobileElement el1 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeApplication[@name=\"Sneakers Management\"]/XCUIElementTypeWindow/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField");
         el1.sendKeys("1712043@test.com");
@@ -88,10 +68,15 @@ public class test2 {
         el3.click();
         List<MobileElement> els1 = (List<MobileElement>) driver.findElementsById("Account");
         els1.get(0).click();
-        List<MobileElement> els3 = (List<MobileElement>) driver.findElementsById("Change Password");
-        els3.get(0).click();
+        MobileElement el4 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeButton[@name=\"Account\"]");
+        el4.click();
+//        MobileElement el5 = (MobileElement) driver.findElementByAccessibilityId("trinh vuhoang");
+//        el5.click();
 
-        Assert.assertEquals(false, els3.isEmpty());
+//        List<MobileElement> els3 = (List<MobileElement>) driver.findElementsById("Change Password");
+//        els3.get(0).click();
+//
+//        Assert.assertEquals(false, els3.isEmpty());
     }
 
 
