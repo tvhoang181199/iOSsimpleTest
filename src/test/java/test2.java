@@ -70,7 +70,7 @@ public class test2 {
         els1.get(0).click();
         MobileElement el4 = (MobileElement) driver.findElementByXPath("//XCUIElementTypeButton[@name=\"Account\"]");
         el4.click();
-//        MobileElement el5 = (MobileElement) driver.findElementByAccessibilityId("trinh vuhoang");
+//        MobileElement el5 = (MobileEement) driver.findElementByAccessibilityId("trinh vuhoang");
 //        el5.click();
 
 //        List<MobileElement> els3 = (List<MobileElement>) driver.findElementsById("Change Password");
